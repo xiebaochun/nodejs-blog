@@ -1,0 +1,34 @@
+.home{
+  position: absolute;
+  width:50px;
+  height:50px;
+  background: rgba(0,0,60,0.3);
+  border-radius: 20px; 
+}
+.home :hover{
+  background: rgb(0,0,100);
+}
+.home .roof{
+  position: absolute;
+  margin-left:8%;
+  margin-top:8%;
+  background: rgba(0,0,0,0);
+  border-left:20px solid rgba(0,0,90,0);
+  border-right:20px solid rgba(0,0,90,0);
+  border-bottom:20px solid #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius:5px;
+}
+.home .wall{
+  position: absolute;
+  margin-top:12px;
+  margin-left:11px;
+  width:8px;
+  height:12px;
+  background: #239;
+  border-left:12px solid #fff;
+  border-right:6px solid #fff;
+  border-top:18px solid #fff;
+  border-top-right-radius: 15px;
+
+}

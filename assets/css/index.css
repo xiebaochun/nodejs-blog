@@ -1,0 +1,35 @@
+.content{
+	/*padding:0 10px 0 10px;*/
+	
+}
+.artical{
+	background:#fff;
+	padding: 0;
+	color:#555;
+	box-shadow: 3px 3px 15px #eee;
+	margin-top:10px;
+}
+.artical a{
+	color: #4078c0;
+}
+.artical-title{
+	background-color: #f5f5f5;
+	padding: 8px 8px 0;
+	border:1px solid #eee;
+	border-bottom-color: #efefef;
+	border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+	font-size: 18px;
+	margin:0;
+}
+.artical-content{
+  margin:0;
+  color:#888;
+  border: 1px solid #eee;
+  border-top: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+._artical-content{
+	padding: 10px;
+}

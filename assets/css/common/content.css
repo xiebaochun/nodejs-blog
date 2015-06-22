@@ -1,0 +1,31 @@
+.content {
+  position: relative;
+  /*top: 50px;*/
+  margin: 0 auto;
+  width: 978px;
+  min-height: 600px;
+  background-color: #fafafa;
+  /*border: 1px solid #ffcf88;*/
+  padding-top: 15px;
+  border-radius: 5px;
+}
+/*.content *{
+  margin-top: 10px;
+}*/
+.login_input {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #FFB66f;
+}
+.login_form {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+}
+.submit_button {
+  background: #FFB66f;
+  width: 100px;
+  height: 40px;
+}

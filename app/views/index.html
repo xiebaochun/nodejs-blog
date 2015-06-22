@@ -1,0 +1,86 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block head %}
+  {% parent %}
+  <link rel="stylesheet" href="./css/index.css">
+{% endblock %}
+
+{% block content %}
+<!--Header-->
+<div class="header">
+  <div class="container">
+    <div class="title">
+      <a class="glyphicon glyphicon-home" href="/"></a>
+    </div>
+    <!-- <div class="title">{{title}}</div> -->
+    {% if !session.user %} 
+    <div class="header-right">
+      <a href="user/signin">登录</a>
+      <a href="user/signup">注册</a>
+    </div>
+    {% endif %}
+    {% if session.user %}
+    <div class="header-right">
+      <a href="admin">后台</a>
+      <a href="user/logout">退出</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+<!--Navigation-->
+<nav class="nav_main">
+  <div class="container">
+    <ul class="top_nav">
+      <li>首页</li>
+      <li>作品</li>
+    </ul>
+  </div>
+</nav>
+<div class="content container"> 
+   <div class="col-md-8">
+  {% for artical in articals %}
+    <div class = "artical">
+        
+      <div class="artical-title">
+        <a class="artical-title-link" href='/artical/{{ artical._id|json_encode }}'>{{ artical.title }}</a> 
+      </div>
+      <div class="artical-content"> 
+        <div class="_artical-content">{{ artical.content }}</div>
+      </div>
+     
+    </div>
+   
+  {% endfor %}
+  </div>
+  <div class = "artical col-md-1"style="background:#900;visibility:hidden;">
+  </div>
+  <div class = "artical col-md-3">
+    vndj
+  </div>
+  
+</div>
+<script type="text/javascript"> 
+  $(function() {
+    $(".artical-title-link").each(function(){
+      var url = $(this).attr("href").replace(/"/g,"")
+      $(this).attr("href",url)
+    })  
+    $("._artical-content").each(function(){
+      $(this).html($("<textarea/>").html($(this).html()).val())
+      $(this).html($(this).html().slice(0,100)+"...<a href="+$(this).parent().prev().children('a').attr('href')+">继续阅读</a>")
+
+    })
+    
+   
+  })
+</script>
+{% endblock %}
+
+{% block foot %}
+ {% parent %}
+
+ {% endblock %}
+
+			

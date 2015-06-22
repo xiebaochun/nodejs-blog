@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block head %}
+  {% parent %}
+  
+{% endblock %}
+
+{% block content %}
+<!--Header-->
+<div class="header">
+  <div class="title">{{title}}</div>
+  <div class="header-right"><a href="/">首页</a></div>
+</div>
+<div class="content">
+  <form method="post" action="signin" class="login_form">
+    <p>
+      <label>
+        用户名：
+      </label>
+      <input type="text" name="name" value="" placeholder="Username or Email"
+      class="login_input" />
+    </p>
+    <p>
+      <label>
+        密码：
+      </label>
+      <input type="password" name="pwd" value="" placeholder="Password" class="login_input"
+      />
+    </p>
+    <p class="remember_me">
+      <input id="remember_me" type="checkbox" name="remember_me" />
+    </p>
+    Remember me on this computer
+    <p class="submit">
+      <input type="submit" name="commit" value="登录" class="submit_button" />
+    </p>
+  </form>
+</div>
+{% endblock %}

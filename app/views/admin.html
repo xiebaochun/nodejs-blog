@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block head %}
+  {% parent %}
+  <link rel="stylesheet" href="/bower-libs/bootstrap-markdown/css/bootstrap-markdown.min.css">
+  <script type="text/javascript" src="/bower-libs/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+{% endblock %}
+
+{% block content %}
+<!--Header-->
+<div class="header">
+  <!-- <div class="title">{{title}}</div> -->
+  <div class="container">
+    <div class="title"><a class="glyphicon glyphicon-home" href="/"></a></div>
+  </div>
+</div>
+<div class="content container">
+  <form class="form form-horizontal" action="admin/publish" method="post">
+    <div class="col-md-6">
+      <label>标题：</label>
+      <input name="title" type="text" class="form-control" placeholder="Title?" />
+      <label>分类：</label>
+      <select name="cate" class="form-control">
+        <option selected="selected">前端</option>
+        <option>nodejs</option>
+        <option>ios</option>
+        <option>android</option>
+        <option>wp</option>
+      </select>
+
+      <textarea name="content" data-provide="markdown" rows="10" data-width="auto"></textarea>
+      <label class="checkbox">
+        <input name="publish" type="checkbox"> content is html?
+      </label>
+      <hr/>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form> 
+</div>
+{% endblock %}

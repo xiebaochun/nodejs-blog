@@ -1,0 +1,85 @@
+<!DOCTYPE html>		
+<html>
+<head>
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="/css/register/styles.css" />
+<link type="text/css" rel="stylesheet" href="/css/register/zhuce.css" />
+<link type="text/css" rel="stylesheet" href="/css/register/home.css" />
+
+<script src="/bower-libs/jquery/dist/jquery.min.js"></script>
+<script src="/js/register/jquery-input-textarea-limiter.js"></script>
+<script src="/js/register/main.js"></script>
+</head>
+<body>
+<div class="header">
+	<div id="shap">
+   <div class="my_home">
+       <a href="../"><div class="home">
+           <div class="roof"></div>
+           <div class="wall"></div>
+         </div> 
+       </a> 
+   </div> 
+  </div>
+	<div class="register_01">
+         <div class="index_01">
+         </div>
+         <div class="index_02">
+         </div>
+         <div class="index_03">
+         </div>
+         <div class="index_04">
+         </div>
+         <div class="index_05">
+         </div>
+         <div class="index_06">
+         </div>
+         <div class="index_07">
+         </div>
+         <div class="index_08">
+         </div>
+	</div>
+	<div class="register_01" id="register_02">
+         <div id="index_01">
+         </div>
+         <div id="index_02">
+         </div>
+         <div id="index_03">
+         </div>
+         <div id="index_04">
+         </div>
+         <div id="index_05">
+         </div>
+         <div id="index_06">
+         </div>
+         <div id="index_07">
+         </div>
+         <div id="index_08">
+         </div>
+	</div>
+
+</div>
+<form action="signup" method="post">
+  <p>用户名：</p>
+  <div>
+  <input type="text" style="display:inline;" name="username" id="username" onfocus="change()" onblur="onb()">
+  <textarea  id="msg_username" style="visibility:hidden;width=500px;height=400px;display:inline;"></textarea>
+  </div>
+  <p>密码：</p>
+  <input type="password" name="password" id="password">
+  <p>确认密码：</p>
+  <input type="password" id="comfirmPassword">
+  <p>电子邮箱：</p>
+  <input type="text" name="email" id="email">
+  <input id="submitBtn" type="submit" name="submit" value="提交"></input> 
+
+</form>
+<footer>
+  <div id="copyright" style="margin-left:45%;margin-top:1.5%;font-size:10px;color:#333;">
+      <p>.         copyright by 前端艺术      .</p>
+      <p>2013-2014 @ holdered by american host</p>
+  </div>
+</footer>
+</body>
+
+</html>
