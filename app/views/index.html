@@ -33,43 +33,40 @@
 <nav class="nav_main">
   <div class="container">
     <ul class="top_nav">
-      <li>首页</li>
-      <li>作品</li>
+      <li>CODING</li>
+      <li>LIFE</li>
     </ul>
   </div>
 </nav>
 <div class="content container"> 
-   <div class="col-md-8">
-  {% for artical in articals %}
-    <div class = "artical">
+   <div class="article-wraper col-md-8">
+  {% for article in articles %}
+    <div class = "article">
         
-      <div class="artical-title">
-        <a class="artical-title-link" href='/artical/{{ artical._id|json_encode }}'>{{ artical.title }}</a> 
+      <div class="article-title">
+        <a class="article-title-link" href='/article/{{ article._id|json_encode }}'>{{ article.title }}</a> 
       </div>
-      <div class="artical-content"> 
-        <div class="_artical-content">{{ artical.content }}</div>
+      <div class="article-content"> 
+        <div class="_article-content">{{ article.content }}</div>
       </div>
+      <div class="article-readmore"><a class="article-title-link" href='/article/{{ article._id|json_encode }}'>> Read More</a></div>
      
     </div>
    
   {% endfor %}
   </div>
-  <div class = "artical col-md-1"style="background:#900;visibility:hidden;">
-  </div>
-  <div class = "artical col-md-3">
-    vndj
-  </div>
+  {% parent %}
   
 </div>
 <script type="text/javascript"> 
   $(function() {
-    $(".artical-title-link").each(function(){
+    $(".article-title-link").each(function(){
       var url = $(this).attr("href").replace(/"/g,"")
       $(this).attr("href",url)
     })  
-    $("._artical-content").each(function(){
+    $("._article-content").each(function(){
       $(this).html($("<textarea/>").html($(this).html()).val())
-      $(this).html($(this).html().slice(0,100)+"...<a href="+$(this).parent().prev().children('a').attr('href')+">继续阅读</a>")
+      $(this).html($(this).html().slice(0,100))
 
     })
     

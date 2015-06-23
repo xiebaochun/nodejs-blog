@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block head %}
+  {% parent %}
+  <link rel="stylesheet" href="/css/article.css">
+  <link rel="stylesheet" href="/bower-libs/bootstrap-markdown/css/bootstrap-markdown.min.css">
+  <script type="text/javascript" src="/bower-libs/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+{% endblock %}
+
+{% block content %}
+ 
+<!--Header-->
+<div class="header">
+  <!-- <div class="title">{{title}}</div> -->
+  <div class="container">
+    <div class="title"><a class="glyphicon glyphicon-home" href="/"></a></div>
+  </div>
+</div>
+<div class="content container">
+  <div class= "article col-md-8"> 
+    <div class="article-tile">
+      <h3>{{ article.title }}<small class="publish-time">  发布于：{{ article.meta.updateAt|date('Y-m-d') }}</small></h3>
+      <h5></h5>
+    </div>
+    <div class="article-content">{{article.content}}</div>
+  </div>
+  {% parent %}
+</div>
+
+<script type="text/javascript"> 
+  $(function() {
+    
+    $(".article-content").each(function(){
+      $(this).html($("<textarea/>").html($(this).html()).val())
+    })
+    
+    // $(".article-title-link").each(function(){
+    //   var url = $(this).attr("href").replace(/"/g,"")
+    //   $(this).attr("href",url)
+    // })    
+    
+  })
+</script> 
+{% endblock %}
+
+{% block foot %}
+  {% parent %}
+
+{% endblock %}
+

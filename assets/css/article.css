@@ -1,0 +1,19 @@
+.article{
+	background:#fff;
+	padding: 15px;
+	box-shadow: 3px 3px 15px #eee;
+}
+.article-tile{
+	position: relative;
+	border-bottom:1px solid #aaa;
+}
+.publish-time{
+	position: absolute;
+	right:10px;
+	bottom: 6px;
+	font-size: 12px;
+}
+.article-content{
+	color:#666;
+	/*font-size: 12px;*/
+}

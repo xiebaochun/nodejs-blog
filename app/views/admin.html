@@ -17,26 +17,51 @@
   </div>
 </div>
 <div class="content container">
-  <form class="form form-horizontal" action="admin/publish" method="post">
-    <div class="col-md-6">
-      <label>标题：</label>
-      <input name="title" type="text" class="form-control" placeholder="Title?" />
-      <label>分类：</label>
-      <select name="cate" class="form-control">
-        <option selected="selected">前端</option>
-        <option>nodejs</option>
-        <option>ios</option>
-        <option>android</option>
-        <option>wp</option>
-      </select>
+  <ul id="myTab" class="nav nav-tabs">
+    <li class="active"><a href="#post" data-toggle="tab">发布文章</a></li>
+    <li class=""><a href="#post-manage" data-toggle="tab">文章管理</a></li>
+    <li class=""><a href="#post-manage" data-toggle="tab">类别管理</a></li>
+    <li class=""><a href="#post-manage" data-toggle="tab">评论管理</a></li>
+    <li class=""><a href="#post-manage" data-toggle="tab">博客管理</a></li>
+    <li class=""><a href="#post-manage" data-toggle="tab">博客配置</a></li>
+    <li class=""><a href="#post-manage" data-toggle="tab">博客栏目</a></li>
+    <li class=""><a href="#post-manage" data-toggle="tab">草稿箱</a></li>
+    <li class=""><a href="#post-manage" data-toggle="tab">回收站</a></li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active in" id="post">
+      <form class="form form-horizontal" action="admin/publish" method="post">
+        <div class="col-md-6">
+          <label>标题：</label>
+          <input name="title" type="text" class="form-control" placeholder="Title?" />
+          <label>分类：</label>
+          <select name="cate" class="form-control">
+            <option selected="selected">前端</option>
+            <option>nodejs</option>
+            <option>ios</option>
+            <option>android</option>
+            <option>wp</option>
+          </select>
 
-      <textarea name="content" data-provide="markdown" rows="10" data-width="auto"></textarea>
-      <label class="checkbox">
-        <input name="publish" type="checkbox"> content is html?
-      </label>
-      <hr/>
-      <button type="submit" class="btn btn-primary">Submit</button>
+          <textarea name="content" data-provide="markdown" rows="10" data-width="auto"></textarea>
+          <label class="checkbox">
+            <input name="publish" type="checkbox"> content is html?
+          </label>
+          <hr/>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form> 
     </div>
-  </form> 
+    <div class="tab-pane fade" id="post-manage">
+      profile tab!
+    </div>
+  </div>
+  
 </div>
+<script type="text/javascript"> 
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    var target = $(e.target).attr("href") // activated tab
+    //alert(target);
+  });
+</script>
 {% endblock %}

@@ -1,4 +1,4 @@
-var Artical = require("../models/artical")
+var Artical = require("../models/article")
 var markdown = require( "markdown" ).markdown;
 
 var Entities = require('html-entities').AllHtmlEntities;

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/css/base/reset.css">
   <link rel="stylesheet" href="/css/common/header.css">
   <link rel="stylesheet" href="/css/common/content.css">
+  <link rel="stylesheet" href="/css/common/sidebar.css">
   <link rel="stylesheet" href="/css/common/footer.css">
   <link rel="stylesheet" href="/bower-libs/bootstrap/dist/css/bootstrap.min.css">
   <script type="text/javascript" src="/bower-libs/jquery/dist/jquery.min.js"></script>
@@ -21,7 +22,39 @@
 </head>
 <body>
   {% block content %}
-      <div>dsfjsf</div>
+    <div class = "article col-md-1"style="background:#900;visibility:hidden;"></div>
+    <div class="sidebar col-md-3">
+      <div class="sidebar-box input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+      </div><!-- /input-group -->
+      <div class="sidebar-box sidebar-seconed">
+        <div class="first sidebar-box-title"> 
+          About
+        </div>
+        <div class="seconed"> 
+          <p>专注前端，分享快乐</p>
+          <p>微博：<a href="">微个日光日</a></p>
+          <p>github：<a href="">微个日光日</a></p>
+        </div>
+
+        
+      </div>
+      <div class="sidebar-box sidebar-third">
+        <div class="first sidebar-box-title"> 
+          Categories
+        </div>
+        <div class="seconed"> 
+          <div class="main-cate">> coding (3)</div>
+          <div class="child-cate">> life (5)</div>
+        </div>
+
+        
+      </div>
+      
+    </div>
   {% endblock %}
 
   {% block foot %}
@@ -34,4 +67,5 @@
   {% endblock %}
   
 </body>
+
 </html>

@@ -2,7 +2,7 @@ var express = require('express');
 var User = require('../app/controllers/user')
 var Index = require('../app/controllers/index')
 var Admin = require('../app/controllers/admin')
-var Artical = require('../app/controllers/artical')
+var Article = require('../app/controllers/article')
 
 var router = express.Router();
 
@@ -28,7 +28,7 @@ router.post('/user/signin',User.signin)
 
 router.get('/user/logout',User.logout)
 
-router.get('/artical/:_id',Artical.index)
+router.get('/article/:_id',Article.index)
 
 
 
